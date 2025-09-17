@@ -1,0 +1,35 @@
+{
+  // 1. 将 Prettier 设置为默认的格式化工具
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // 2. 开启“保存时自动格式化”
+  "editor.formatOnSave": true,
+
+  // 3. (可选但推荐) 确保 ESLint 插件能检测所有相关文件
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // 4. 为特定语言开启保存时格式化，确保它能覆盖全局设置
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+
+  // 5. 默认使用 zsh
+  "terminal.integrated.defaultProfile.linux": "zsh",
+
+  // Option: disable json schema download
+  "json.schemaDownload.enable": false
+}
