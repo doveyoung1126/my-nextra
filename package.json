@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
     "build": "next build --turbopack",
     "start": "next start",
     "format": "prettier --check .",
@@ -11,9 +12,11 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "15.5.3",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "next": "^15.5.3",
+    "nextra": "^4.5.0",
+    "nextra-theme-blog": "^4.5.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -25,6 +28,7 @@
     "eslint-config-next": "15.5.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "pagefind": "^1.4.0",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4",
