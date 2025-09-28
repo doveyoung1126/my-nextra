@@ -4,7 +4,7 @@ import { getPageMap } from "nextra/page-map"
 import "nextra-theme-blog/style.css"
 
 export const metadata = {
-  title: "Blog Example",
+  title: "Feegr's Blog",
 }
 
 {
@@ -17,10 +17,10 @@ export default async function RootLayout({
   children: React.ReactNode
 }>) {
   const banner = (
-    <Banner storageKey="4.0-release">
-      🎉 Nextra 4.0 is released.{" "}
+    <Banner storageKey="welcome">
+      🎉 Welcome.{" "}
       <a
-        href="#"
+        href="/posts"
         style={{
           textDecoration: "underline",
           textUnderlinePosition: "from-font",
@@ -35,7 +35,7 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Head backgroundColor={{ dark: "#0f172a", light: "#f8f7f1" }} />
       <body>
-        <Layout>
+        <Layout banner={banner}>
           <Navbar pageMap={await getPageMap()}>
             {/* <Search /> */}
             <ThemeSwitch />
@@ -44,16 +44,30 @@ export default async function RootLayout({
           {children}
 
           <Footer>
-            <abbr
+            {/* <abbr
               title="This site and all its content are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
               style={{ cursor: "help" }}
             >
               CC BY-NC 4.0
+            </abbr>{" "} */}
+            <abbr
+              title="What Is Your Attention?"
+              style={{
+                cursor: "help",
+                background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                color: "white",
+                padding: "4px 8px",
+                borderRadius: "6px",
+                fontWeight: "bold",
+                textDecoration: "none",
+              }}
+            >
+              WIYA
             </abbr>{" "}
-            {new Date().getFullYear()} © Dimitri POSTOLOV.
-            <a href="/feed.xml" style={{ float: "right" }}>
+            {new Date().getFullYear()} © Feegr
+            {/* <a href="/feed.xml" style={{ float: "right" }}>
               RSS
-            </a>
+            </a> */}
           </Footer>
         </Layout>
       </body>
