@@ -2,13 +2,12 @@ import { Footer, Layout, Navbar, ThemeSwitch } from "nextra-theme-blog"
 import { Banner, Head, Search } from "nextra/components"
 import { getPageMap } from "nextra/page-map"
 import "nextra-theme-blog/style.css"
+import Image from "next/image"
+import logo from "../public/logo.png"
+import "./globals.css"
 
 export const metadata = {
   title: "Feegr's Blog",
-}
-
-{
-  /* 123 */
 }
 
 export default async function RootLayout({
@@ -36,8 +35,9 @@ export default async function RootLayout({
       <Head backgroundColor={{ dark: "#0f172a", light: "#f8f7f1" }} />
       <body>
         <Layout banner={banner}>
+          <Image src={logo} width={100} height={50} alt="Logo" />
           <Navbar pageMap={await getPageMap()}>
-            {/* <Search /> */}
+            <Search />
             <ThemeSwitch />
           </Navbar>
 
