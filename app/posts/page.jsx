@@ -10,7 +10,7 @@ export default async function PostsPage() {
   const tags = await getTags()
   const posts = await getPosts()
   const allTags = Object.create(null)
-  console.log(tags)
+
   for (const tag of tags) {
     allTags[tag] ??= 0
     allTags[tag] += 1

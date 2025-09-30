@@ -5,6 +5,7 @@ import "nextra-theme-blog/style.css"
 import Image from "next/image"
 import logo from "../public/logo.png"
 import "./globals.css"
+import Link from "next/link"
 
 export const metadata = {
   title: "Feegr's Blog",
@@ -35,10 +36,18 @@ export default async function RootLayout({
       <Head backgroundColor={{ dark: "#0f172a", light: "#f8f7f1" }} />
       <body>
         <Layout banner={banner}>
-          <Image src={logo} width={100} height={50} alt="Logo" />
           <Navbar pageMap={await getPageMap()}>
-            <Search />
-            <ThemeSwitch />
+            <div className="x:flex x:items-center x:gap-3 flex-1 justify-between">
+              <div className="x:flex x:gap-3 ml-10 items-center">
+                <Image src={logo} width={150} height={30} alt="Logo" />
+              </div>
+              <div className="x:flex x:items-center x:gap-3 justify-end">
+                <Link href={"/posts"}>Posts</Link>
+                <Link href={"/about"}>About</Link>
+                <Search />
+                <ThemeSwitch />
+              </div>
+            </div>
           </Navbar>
 
           {children}
@@ -61,6 +70,7 @@ export default async function RootLayout({
                 fontWeight: "bold",
                 textDecoration: "none",
               }}
+              className="ml-8"
             >
               WIYA
             </abbr>{" "}
