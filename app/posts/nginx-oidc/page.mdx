@@ -2,7 +2,7 @@
 title: "通用 NGINX OIDC 认证集成指南"
 date: "2025-11-17"
 description: "一份为 Nginx 站点快速、高效地集成基于 OpenID Connect (OIDC) 的统一认证功能的通用指南，使用 oauth2-proxy 作为中间件。"
-tags: ["NGINX", "OIDC", "oauth2-proxy", "Authentication", "Security", "DevOps"]
+tags: ["Nginx", "OIDC", "oauth2-proxy", "Authentication", "Security", "DevOps"]
 ---
 
 # NGINX OIDC 认证集成指南
@@ -72,7 +72,7 @@ sequenceDiagram
 
 **示例: `/etc/nginx/sites-available/oauth2proxy.conf`**
 
-```nginx copy=true
+```nginx
 server {
     listen 443 ssl http2;
     server_name oauth2proxy.your-domain.com;
