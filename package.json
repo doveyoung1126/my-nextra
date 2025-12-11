@@ -12,7 +12,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "^15.5.3",
+    "next": "^15.5.7",
     "nextra": "^4.5.0",
     "nextra-theme-blog": "^4.5.0",
     "react": "^19.1.1",
