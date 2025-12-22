@@ -81,6 +81,11 @@ export default async function RootLayout({
           </Footer>
         </Layout>
       </body>
+      <script
+        defer
+        src="/script.js"
+        data-website-id="42056495-955f-4605-99e5-f32c1b2f8d39"
+      ></script>
     </html>
   )
 }
