@@ -83,7 +83,7 @@ export default async function RootLayout({
       </body>
       <script
         defer
-        src="/script.js"
+        src="https://blog.feegr.cc/script.js"
         data-website-id="42056495-955f-4605-99e5-f32c1b2f8d39"
       ></script>
     </html>
