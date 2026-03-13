@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://blog.feegr.cc
+
+# Sitemaps
+Sitemap: https://blog.feegr.cc/sitemap.xml

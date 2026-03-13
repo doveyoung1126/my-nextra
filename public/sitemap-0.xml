@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://blog.feegr.cc/posts/hello-nextra</loc><lastmod>2026-03-13T08:21:57.374Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/posts/nginx-get-real-ip</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/posts/nginx-oidc</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/about</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/posts</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/tags/Authentication</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/tags/DevOps</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/tags/hello</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/tags/Nginx</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/tags/oauth2-proxy</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/tags/OIDC</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://blog.feegr.cc/tags/Security</loc><lastmod>2026-03-13T08:21:57.375Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

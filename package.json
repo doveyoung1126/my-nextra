@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "postbuild": "pagefind --site .next/server/app --output-path out/_pagefind",
-    "build": "next build --turbopack",
+    "build": "next build --turbopack && next-sitemap",
     "start": "next start",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "next": "^15.5.7",
+    "next-sitemap": "^4.2.3",
     "nextra": "^4.5.0",
     "nextra-theme-blog": "^4.5.0",
     "react": "^19.1.1",
