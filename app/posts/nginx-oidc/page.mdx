@@ -15,7 +15,7 @@ tags: ["Nginx", "OIDC", "oauth2-proxy", "Authentication", "Security", "DevOps"]
 
 所以要使用一种方式能很方便的验证访问者是否合法，这里牵扯到了零信任验证的概念，我们通过引入 `oauth2-proxy` 作为认证中间件，实现了 Nginx 与身份提供商 (IdP) 的解耦，使得认证过程对现有 Nginx 配置的侵入性降到最低。
 
-*Nginx Plus 支持 OIDC 可以不需要 `oauth2-proxy` *
+*Nginx Plus 支持 OIDC 可以不需要 `oauth2-proxy`*
 
 ## 二. 架构说明
 
@@ -275,3 +275,7 @@ cookie_samesite = "lax"
 - **解决方案**:
   1.  仔细核对 `oauth2-proxy.cfg` 中的 `oidc_issuer_url`, `client_id`, `client_secret` 是否与 IdP 应用配置完全一致。
   2.  登录 IdP 后台，确保应用配置的“回调地址 (Redirect URI)”列表中，包含了且仅包含了 `https://oauth2proxy.your-domain.com/oauth2/callback`。
+
+---
+
+如果你对这篇文章感兴趣，不妨去看看站里的另一篇文章[Nginx进阶：如何正确获取客户端真实IP](https://blog.feegr.cc/posts/nginx-get-real-ip) ，介绍了如何用 XFF 和相关参数让 Nginx 正确传递客户的真实 IP. 
