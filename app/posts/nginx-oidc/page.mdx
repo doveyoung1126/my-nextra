@@ -11,11 +11,11 @@ tags: ["Nginx", "OIDC", "oauth2-proxy", "Authentication", "Security", "DevOps"]
 
 公司有几个内部工具必须放在公网上使用，因为员工有出差需求，这看起来非常危险，实际上一点也不安全。也许你会说为什么不用 VPN 呢？
 
-哦我亲爱的老伙计，典型的技术人员思维，难道你要让电脑盲安装调试 VPN 吗？我可不想让这个工作落到我的头上，我真想拿靴子狠狠踢你的屁股。 
+哦我亲爱的老伙计，典型的技术人员思维，难道你要让电脑盲安装调试 VPN 吗？我可不想让这个工作落到我的头上，我真想拿靴子狠狠踢你的屁股。
 
 所以要使用一种方式能很方便的验证访问者是否合法，这里牵扯到了零信任验证的概念，我们通过引入 `oauth2-proxy` 作为认证中间件，实现了 Nginx 与身份提供商 (IdP) 的解耦，使得认证过程对现有 Nginx 配置的侵入性降到最低。
 
-*Nginx Plus 支持 OIDC 可以不需要 `oauth2-proxy`*
+_Nginx Plus 支持 OIDC 可以不需要 `oauth2-proxy`_
 
 ## 二. 架构说明
 
@@ -267,15 +267,8 @@ cookie_samesite = "lax"
 - **原因**: `oauth2-proxy` 与 IdP 之间的配置不匹配。
 - **解决方案**:
   1.  仔细核对 `oauth2-proxy.cfg` 中的 `oidc_issuer_url`, `client_id`, `client_secret` 是否与 IdP 应用配置完全一致。
-  2.  登录 IdP 后台，确保应用配置的“回调地址 (Redirect URI)”列表中，包含了且仅包含了 `https://oauth2proxy.your-domain.com/oauth2/callback`。
-
-### 问题三：IdP 登录页面报错或认证失败？
-
-- **原因**: `oauth2-proxy` 与 IdP 之间的配置不匹配。
-- **解决方案**:
-  1.  仔细核对 `oauth2-proxy.cfg` 中的 `oidc_issuer_url`, `client_id`, `client_secret` 是否与 IdP 应用配置完全一致。
-  2.  登录 IdP 后台，确保应用配置的“回调地址 (Redirect URI)”列表中，包含了且仅包含了 `https://oauth2proxy.your-domain.com/oauth2/callback`。
+  2.  登录 IdP 后台，确保应用配置的“回调地址 (Redirect URI)”列表中，包含了 `https://oauth2proxy.your-domain.com/oauth2/callback`。
 
 ---
 
-如果你对这篇文章感兴趣，不妨去看看站里的另一篇文章[Nginx进阶：如何正确获取客户端真实IP](https://blog.feegr.cc/posts/nginx-get-real-ip) ，介绍了如何用 XFF 和相关参数让 Nginx 正确传递客户的真实 IP. 
+如果你对这篇文章感兴趣，不妨去看看站里的另一篇文章[Nginx进阶：如何正确获取客户端真实IP](https://blog.feegr.cc/posts/nginx-get-real-ip) ，介绍了如何用 XFF 和相关参数让 Nginx 正确传递客户的真实 IP.
